@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Carga</title>
+    <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Carga</h1>
+        <form id="itemForm">
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" required>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="talle">Talle:</label>
+                <select id="talle" name="talle" required>
+                    <option value="" disabled selected>Seleccione un talle</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cargar">
+            </div>
+        </form>
+        <div class="items-list" id="itemsList">
+            <h2>Items Cargados</h2>
+        </div>
+    </div>
+    <script src="inventario.js"></script>
+</body>
+</html>
